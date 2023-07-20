@@ -13,21 +13,21 @@ fetch("https://randomuser.me/api")
     return resp.json();
 })
 .then(function(data){
-    console.log(data.results[0].name.first);
+    //console.log(data.results[0]);
+    //console.log(data.results[0].name.first);
 first.innerHTML= `<h2>Имя : ${data.results[0].name.first}</h2>`;
 
 
-    console.log(data.results[0].name.last);
+    //console.log(data.results[0].name.last);
 last.innerHTML= `<h2>Фамилия : ${data.results[0].name.last}</h2>`;
 
 
-    console.log(data.results[0].name.title);
+    //console.log(data.results[0].name.title);
 title.innerHTML= `<h2> Кто это? : ${data.results[0].name.title}</h2>`;
 
-// console.log(data.results[0].picture.large);
-// foto.innerHTML= `<h2> Foto : <img>img src="${data.results[0].picture.large}" width="50" 
-// height="50" border="0" alt="Пример"> </h2>`;
-
+ //console.log(data.results[0].picture.large);
+foto.innerHTML= `<img src=${data.results[0].picture.large} />`;
+})
 
 
 // })
@@ -38,4 +38,3 @@ title.innerHTML= `<h2> Кто это? : ${data.results[0].name.title}</h2>`;
 // .then(function(data){
 //     console.log(data.results[0].email,data.results[0].dob.age )
 //     console.log(data.results[0].dob.age)
- })
